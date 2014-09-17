@@ -6,7 +6,7 @@
 
 - name: ensure PlayOnLinux repository is enabled
   apt_repository:
-    repo: deb http://deb.playonlinux.com/ trusty main
+    repo: deb http://deb.playonlinux.com/ {{ ansible_distribution_release }} main
     update_cache: yes
     state: present
 
