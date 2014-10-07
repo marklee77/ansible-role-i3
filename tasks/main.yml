@@ -1,4 +1,13 @@
 ---
+- name: ensure playonlinux dependencies are installed
+  apt: 
+    pkg: "{{ item }}" 
+    state: latest 
+    update_cache: yes 
+    cache_valid_time: 600
+  with_items:
+    - wine
+
 - name: ensure PlayOnLinux key is present 
   apt_key:
     url: http://deb.playonlinux.com/public.gpg
