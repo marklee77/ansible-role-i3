@@ -1,29 +1,30 @@
 ---
-- name: ensure playonlinux dependencies are installed
+- name: ensure i3wm dependencies are installed
   apt: 
     pkg: "{{ item }}" 
     state: latest 
     update_cache: yes 
     cache_valid_time: 600
   with_items:
-    - wine
-
-- name: ensure PlayOnLinux key is present 
-  apt_key:
-    url: http://deb.playonlinux.com/public.gpg
-    state: present 
+    - python-software-properties
 
 - name: ensure PlayOnLinux repository is enabled
   apt_repository:
-    repo: deb http://deb.playonlinux.com/ {{ ansible_distribution_release }} main
+    repo: deb http://debian.sur5r.net/i3/ {{ ansible_distribution_release }} universe
     update_cache: yes
     state: present
 
-- name: ensure playonlinux is installed
+- name: ensure i3wm key is present 
+  apt: 
+    pkg: sur5r-keyring
+    state: latest 
+    update_cache: yes 
+    force: yes 
+
+- name: ensure i3wm is installed
   apt: 
     pkg: "{{ item }}" 
     state: latest 
     update_cache: yes 
-    cache_valid_time: 600
   with_items:
-    - playonlinux
+    - i3
