@@ -27,4 +27,9 @@
     state: latest 
     update_cache: yes 
   with_items:
+    - conky-all
+    - dunst
+    - dzen2
     - i3
+    - i3status
+    - rxvt-unicode-256color

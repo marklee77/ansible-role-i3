@@ -1,16 +1,15 @@
 marklee77.i3
-=====================
+============
 
-[![Build Status](https://travis-ci.org/marklee77/ansible-role-playonlinux.svg?branch=master)](https://travis-ci.org/marklee77/ansible-role-playonlinux)
-
-Role to install playonlinux on Ubuntu.
+This role installs packages needed to have a functional i3 based "desktop"
+environment. It is still a work in progress.
 
 Example Playbook
 -------------------------
 
     - hosts: all
       roles:
-        - marklee77.playonlinux
+        - marklee77.i3
 
 License
 -------
