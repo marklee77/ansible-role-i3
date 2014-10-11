@@ -33,3 +33,11 @@
     - i3
     - i3status
     - rxvt-unicode-256color
+
+- name: update custom desktop configuration from template
+  template:
+    src: usr/share/xsessions/custom.desktop
+    dest: /usr/share/xsessions/custom.desktop
+    owner: root
+    group: root
+    mode: 0644
