@@ -27,12 +27,19 @@
     state: latest 
     update_cache: yes 
   with_items:
+    - blueman
     - conky-all
+    - dmenu
     - dunst
     - dzen2
     - i3
     - i3status
+    - suckless-tools
+    - unclutter
     - rxvt-unicode-256color
+    - xautolock
+    - xbacklight
+    - xclip
 
 - name: update custom desktop configuration from template
   template:
