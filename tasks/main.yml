@@ -8,7 +8,7 @@
   with_items:
     - python-software-properties
 
-- name: ensure PlayOnLinux repository is enabled
+- name: ensure i3wm repository is enabled
   apt_repository:
     repo: deb http://debian.sur5r.net/i3/ {{ ansible_distribution_release }} universe
     update_cache: yes
@@ -37,6 +37,7 @@
     - suckless-tools
     - unclutter
     - rxvt-unicode-256color
+    - volti
     - xautolock
     - xbacklight
     - xclip
